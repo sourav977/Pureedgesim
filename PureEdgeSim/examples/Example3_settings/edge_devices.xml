@@ -5,7 +5,7 @@
 		here), 30 percent of all devices will be of the first type, this percentage 
 		is defined here <percentage> -->
 		
-	<device> <!-- this is a smartphone, for example -->
+	<device> <!-- this is a kiosk -->
 		<connectivity>wifi</connectivity><!-- the type of network connection -->
 		<mobility>false</mobility><!-- the device is mobile or fixed -->
 		<speed>0</speed><!-- the speed of the device in meters per second : 1.4m/s equals 5km/h, 0 = non mobile-->
@@ -14,38 +14,17 @@
 		<minMobilityDuration>0</minMobilityDuration><!-- the minimum delay before stopping-->
 		<maxMobilityDuration>0</maxMobilityDuration><!-- the maximum delay before stopping-->
 		<battery>false</battery> <!-- relies on battery? -->
-		<percentage>60</percentage> <!-- percentage of this device type -->
+		<percentage>100</percentage> <!-- percentage of this device type -->
 		<batteryCapacity>0</batteryCapacity> <!-- battery capacity in Watt-Hour -->
 		<initialBatteryLevel>0</initialBatteryLevel> <!-- initial battery percentage. e.g. set it to 50 in order to generate devices with 50% remaining energy-->
 		<idleConsumption>6000</idleConsumption><!-- idle energy consumption in Watt-->
 		<maxConsumption>144000</maxConsumption><!-- max energy consumption in Watt, 
 			when device cpu is use at 100% -->
-		<isOrchestrator>false</isOrchestrator> <!-- it has a task orchestrator or not -->
+		<isOrchestrator>true</isOrchestrator> <!-- it has a task orchestrator or not -->
 		<generateTasks>true</generateTasks> <!-- it generates data/tasks or not -->
 	    <cores>8</cores><!-- how many tasks can this device execute in parallel -->
 		<mips>10000</mips> <!-- MIPS (million instructions per second) per CPU core -->
-	    <ram>4000</ram>
-		<storage>128000</storage>
-	</device>
-	<device>
-		<connectivity>wifi</connectivity>
-		<mobility>false</mobility>
-		<speed>0</speed> 
-		<minPauseDuration>0</minPauseDuration>
-		<maxPauseDuration>0</maxPauseDuration>
-		<minMobilityDuration>0</minMobilityDuration>
-		<maxMobilityDuration>0</maxMobilityDuration>
-		<battery>false</battery>
-		<percentage>40</percentage>
-		<batteryCapacity>0</batteryCapacity>
-		<initialBatteryLevel>0</initialBatteryLevel>
-		<idleConsumption>6</idleConsumption>
-		<maxConsumption>144</maxConsumption>
-		<isOrchestrator>false</isOrchestrator>
-		<generateTasks>true</generateTasks>
-		<cores>0</cores><!-- A sensor that does not have computing capabilities -->
-		<mips>0</mips>
-		<ram>0</ram>
-		<storage>0</storage>
+	    <ram>8000</ram> <!-- Ram capacity in MBytes -->
+		<storage>128000</storage> <!-- Storage in MBytes -->
 	</device>
 </edge_devices>
